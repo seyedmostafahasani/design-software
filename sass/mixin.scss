@@ -1,0 +1,16 @@
+
+/*---------------------
+	Mixin
+-----------------------*/
+
+@mixin transform($x , $y , $z){
+	transform : translate3d(#{$x}px , #{$y}px , #{$z}px);
+	-webkit-transform : translate3d(#{$x}px , #{$y}px , #{$z}px);
+	-moz-transform : translate3d(#{$x}px , #{$y}px , #{$z}px);
+}
+
+@mixin transition($time , $function , $delay){
+	transition: all #{$time}s #{$function} #{$delay}s;
+	-webkit-transition: all #{$time}s #{$function} #{$delay};
+	-moz-transition: all #{$time}s #{$function} #{$delay};
+}

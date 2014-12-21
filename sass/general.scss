@@ -1,0 +1,97 @@
+/*------------------
+	General
+--------------------*/
+$max-phone : "only screen and (max-width : 640px)";
+$max-tablet : "only screen and (max-width : 1024px)";
+
+@font-face{
+	font-family: 'Fa';
+	src : url('../fonts/Nazanin.ttf') format(truetype);
+}
+
+@font-face{
+	font-family: 'En';
+	src : url('../fonts/segoeui.ttf') format(truetype);
+}
+
+@font-face{
+	font-family: 'awesome';
+	src : url('../fonts/fontawesome-webfont.ttf') format(truetype);
+}
+
+* , *:before , *:after{
+	box-sizing: border-box;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+}
+
+html , body{
+	font-family: 'Fa';
+	font-size: 15px;
+	overflow-x : hidden;
+
+	@media #{$max-tablet}{
+		font-size: 12px;
+	}
+}
+
+.wrap-page{
+	max-width: 1366px;
+	margin: 0 auto;
+
+	> header , footer{
+		background:#77AADB;
+	}
+}
+
+img{
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+
+a{
+	text-decoration: none;
+	display: block;
+}
+
+.clear{
+	width: 0;
+	height: 0;
+	clear: both;
+}
+
+.text label{
+	display: block;
+}
+
+.checkBox , .text{
+	margin: 5px 0 5px 0;
+}
+
+.checkBox > *:not(.clear){
+	float: right;
+}
+
+.text > *{
+	margin-right: 5px;
+}
+
+input[type="text"]{
+	outline: 0;
+	border: 1px solid #CACBC1;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 5px;
+	width: 160px;
+	font-family: "Fa";
+	font-size: 1.2em;
+
+	&:focus{
+		outline: 0;
+	}
+}
+
+.logo{
+	font-family: 'En';
+}

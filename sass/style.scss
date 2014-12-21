@@ -1,0 +1,144 @@
+@import 'reset.scss';
+@import 'general.scss';
+@import 'mixin.scss';
+@import 'query.scss';
+
+.wrap-page{
+	height: 430px;
+	@include transform(0 , 0 , 0);
+	@include transition(.25 , ease-in-out , 0);
+}
+
+.wrapShow{
+	@include transform(-200 , 0 , 0);
+	@include transition(.25 , ease-in-out , 0);	
+}
+
+/*---------------------
+	Header
+-----------------------*/
+
+header{
+	padding-top: 1px;
+	
+	.logo{
+		float: left;
+		width: 210px;
+		font-size: 2.2em;
+		margin: 7px 0 0 10px;
+
+		@media #{$max-phone}{
+			width: 50px;
+		}
+
+		h1{
+			color : #fff;
+		}
+	}
+
+	.toolbar{
+		float: right;
+		position: relative;
+
+		> *:not(.clear){
+			float: right;
+			width: 37px;
+			margin: 5px;
+			padding: 5px;
+		}
+	}
+
+	.info-sign{
+		position: absolute;
+		width: 240px;
+		top: 110%;
+		@include transform(90,0,0);
+		@include transition(.25,ease-in-out,0);
+
+		.name{
+			padding: 15px 5px;
+			background: #599D7E;
+
+			p{
+				text-align: center;
+				color : #fff;
+				font-size: 1.3em;
+			}
+
+			p:nth-child(2){
+				margin-top: 21px;
+				font-size: 1em;
+			}
+		}
+
+		ul{
+			background:#4C4C4C;
+		}
+		
+		li:not(:last-child){
+			float: right;
+			margin: 10px 5px;
+			border: 1px solid rgba(213, 214, 207, 0.1);
+			border-radius: 2px;
+			width: 50px;
+			padding: 5px;
+
+			img{
+				margin: 0 auto;
+			}
+
+			p{
+				color : #ddd;
+				text-align: center;
+			}
+		}
+	}
+
+	.infoShow{
+		@include transform(-110,0,0);
+		@include transition(.25,ease-in-out,0);
+	}
+}
+
+div[class*="responsMenu"]{
+	width: 200px;
+	background: #316CAE;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: -200px;
+	@include transition(.25,ease-in-out,0);
+
+	a{
+		color: #fff;
+		font-size: 1.4em;
+		padding: 0px 63px 0px 0px;
+		text-align: right;
+		position: relative;
+	}
+
+	ul{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		@include transition(.25,linear,0);
+	}
+}
+
+.responsMenu1 > ul > li > a:before , .rm > ul > li > a.setting:before{
+	content: "\f105";
+	font-family: 'FontAwesome';
+	position: absolute;
+	font-size: 1.1em;
+	color: #ddd;
+	right: 9px;
+	top: 0;
+}
+
+.responsMenu1 > ul > li{
+		margin-top: 50px;
+}
+
+.responsMenu2 > ul > li , .responsMenu3 > ul > li{
+	margin-top: 33px;
+}
